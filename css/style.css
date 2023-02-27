@@ -1,0 +1,203 @@
+
+@font-face {
+    font-family: "DIN Next LT Arabic";
+    src: url(../fonts/DINNextLTArabic-Regular-3.ttf);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #ccc;
+    color: #272727;
+    font-size: 14px;
+    margin: 0;
+}
+a{
+    text-decoration: none !important;
+}
+.logo {
+    max-width: 200px;
+}
+.push-left {
+width: 100%;
+}
+.navbar-one{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-one .logo .img-logo{
+    width:400px;
+    height: 51px;
+}
+.search {
+    width: 350px;
+    direction: rtl;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #F6F6F6;
+    border-radius: 25px ;
+    padding: 0 30px;
+   
+}
+.search img{
+padding-left: 10px;
+}
+.search .input-search{
+    height: 50px;
+    text-align: right;
+    direction: rtl;
+    background-color: #F6F6F6;
+    font-family: "DIN Next LT Arabic";
+    color: #8F9091;
+    font-size: 18px;
+    border-radius: 25px !important;
+    border:none !important ;
+}
+.search .input-search::placeholder{
+    text-align: right;
+    direction: rtl;
+    font-size: 18px;
+    color: #8F9091;
+    font-family: "DIN Next LT Arabic";
+}
+.nav-section2{
+    display: flex;
+    align-items: center;
+}
+.nav-section2 img{
+    display: block;
+    margin: auto;
+}
+.icons-navbar{
+    display: flex;
+    align-items: center;
+}
+.back-icon{
+    display: flex;
+    align-items: center;
+    background: #DCE5EF;
+    border-radius: 50%;
+    padding: 10px;
+    width: 44px;
+    height: 44px;
+    margin: 0 5px;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    flex-direction: column !important;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    color: #000 !important;
+    direction: rtl;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;    padding: 20px 100px 10px 100px !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #444 !important;
+    font-family: 'DIN Next LT Arabic';
+    display: block;
+    line-height: 30px;
+    padding: 25px 0px 0px 0px;
+    font-size: 17px;
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+}
+.navbar .dropdown-menu div[class*="col"] {
+   margin-bottom:1rem;
+}
+
+.navbar .dropdown-menu {
+  border:none;
+  background-color: #e9e9e9 !important;
+}
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+  
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+.navbar {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+.navbar .nav-item {
+  padding:.5rem .5rem;
+  margin:0 .25rem;
+}
+
+/* makes the dropdown full width  */
+.navbar .dropdown {position:static;}
+
+.navbar .dropdown-menu {
+  width:100%;
+  left:0;
+  right:0;
+/*  height of nav-item  */
+  top:150px;
+  
+  display:block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  
+}
+  /* shows the dropdown menu on hover */
+.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+  display:block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+  
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+  }
+
+}
+
+@media (max-width:1000px) {
+    .navbar{
+        padding: 10px !important;
+    }
+    .navbar-one .logo .img-logo{
+        width: 240px;
+        object-fit: contain;
+        display: block;
+        margin-right: 14%;
+    }
+    .icons-navbar{
+        display: none;
+    }
+    .navbar-one{
+        flex-direction: column;
+        align-items: start;
+    }
+    .search{
+        margin-right: auto;
+        width: 80%;
+    }
+    .push-left{
+        height: 10px;
+    }
+    .search .input-search{height: 44px;}
+    .search .input-search::placeholder{
+        font-size: 15px;
+    }
+    .navbar-light .navbar-toggler{
+        position: absolute;
+    right: 22px;
+    top: 63px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        text-align: center;
+    }
+}
